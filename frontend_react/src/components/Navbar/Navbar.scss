@@ -1,0 +1,202 @@
+//sets the image and the list of containers and there link in
+//a flex container. It will have a white background and border with a
+//transparancy setting and a blur filter. It's z setting positions the 
+//flex container on top
+.app__navbar {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 2rem;
+    background: rgba(255, 251, 0, 0.178);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(162, 0, 255, 0.18);
+    position: fixed;
+    z-index: 2;
+}
+
+//controls the size of logo image and flex container options
+.app__navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+        width: 300px;
+        height: 46px;
+
+        @media screen and (min-width: 2000px) {
+            width: 600px;
+            height: 92px;
+        }
+    }
+}
+
+//controls the links and puts them in a flex container
+.app__navbar-links {
+    flex: 1;
+    display: flex;
+    margin-left: 2%; 
+    justify-content: left;
+    align-items: left;
+
+    list-style: none;
+
+    li {
+        margin: 0 1rem;
+        cursor: pointer;
+
+        flex-direction: column; //sets the dot and link in a vertical flex container
+
+        //creates the dot above the link 
+        p {            
+            color: transparent;  
+            font-size: 15px;
+            font-weight: 900;   
+            transition: all 0.3s ease-in-out;
+        }
+
+        //controls the link and what happens when hovered over the link
+        a {
+            color: var(--bright-purple); //this variable is established in the index.css file of the main directory
+            text-decoration: none;
+            flex-direction: column;
+
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 900;
+
+            transition: all 0.3s ease-in-out;
+                       
+        }
+
+        //adds a dot over the selected link that is being hovered over
+        &:hover {
+            p {
+                color: var(--yellow-color); //this variable is established in the index.css file of the main directory
+                transition: all 0.3s ease-in-out;
+            }
+
+            a {
+                color: var(--yellow-color);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        display: none;
+    }
+}
+
+.app__navbar-menu {
+    //controls the size, shape, color of the container of the menu button
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bright-purple); //this variable is established in the index.css file of the main directory
+
+    //controls the size and the color of the menu button image
+    svg {
+        width: 70%;
+        height: 70%;
+        color: var(--yellow-color);
+    }
+
+    //this div will control the container that is the pop out menu
+    //the beginning portion controls the size and position of the menu
+    //as well as the flex container
+    div {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+
+        padding: 1rem;
+
+        width: 80%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+
+        //creates the background of the menu pop out
+        background: url('../../assets/bgIMG.png'); //use the actual address of the image in .scss code. Rather than the index.js
+        opacity: .95;
+        background-color: var(--white-color);
+        background-size: cover;
+        background-repeat: repeat;
+
+        //adds a lite shadow to the right side of the menu pop out
+        box-shadow: 0 0 30px rgba(133, 37, 37, 0.514);
+
+        //adds a x image with the given parameters to the menu when open 
+        //closes the menu
+        svg {
+            width: 35px;
+            height: 35px;
+            color: var(--bright-purple);
+            margin: 0.5rem 1rem;
+        }
+
+        //creates a flex container in a list format with the menu links
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+
+            //controls each link in the list
+            li {
+                margin: 1rem;
+
+                a {
+                    color: var(--bright-purple);
+                    text-decoration: none;
+                    font-size: 1.8rem;
+                    text-transform: uppercase;
+                    font-weight: 900;
+
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        color: var(--yellow-color);
+                    }
+                }
+            }
+
+        }
+
+        //removes the menu when the screen is above 900px
+        @media screen and (min-width: 900px) {
+            display: none;
+        }
+    }
+
+    //removes the menu button when the screen is larger than 900px
+    @media screen and (min-width: 900px) {
+        display: none;
+    }
+}
+
+
+
+
+

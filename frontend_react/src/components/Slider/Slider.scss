@@ -1,0 +1,207 @@
+.outside-wrapper {
+    padding-top: 20px;
+    width: 70%;       
+}
+
+.slider {
+    width: 100%;    
+    position: relative;
+    overflow: hidden;
+    padding-top: 66.66%;
+}
+
+.slide {
+    position: absolute;    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 600px) {
+    .slide img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.slide img {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.title {
+    position: absolute;
+    border-radius: 20px;
+    top: 3rem;
+    left: 5rem;
+    opacity: 0;
+    width: fit-content;  
+    padding: 1rem;  
+    background: rgba(0, 0, 0, 0.6);
+    animation: slide-down 1s ease .5s;
+    animation-fill-mode: forwards;
+    // visibility: hidden;
+}
+
+@keyframes slide-down {
+    0% {
+        visibility: visible;
+        top: 1rem;
+    }
+    100% {
+        visibility: visible;
+        left: 3rem;
+    }
+}
+
+.title > * {
+    color: #fff;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.content {
+    position: absolute;
+    border-radius: 20px;
+    bottom: 3rem;
+    left: 5rem;
+    opacity: 0;    
+    width: 90%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    animation: slide-up 1s ease .5s;
+    animation-fill-mode: forwards;
+    // visibility: hidden;
+}
+
+@keyframes slide-up {
+    0% {
+        visibility: visible;
+        bottom: 1rem;
+    }
+    100% {
+        visibility: visible;
+        bottom: 3rem;
+    }
+}
+
+.content > * {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.current {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.current .content {
+    opacity: 1;
+}
+
+.current .title {
+    opacity: 1;
+}
+
+.arrow {
+    border: 2px solid #08fd00;
+    border-radius: 50%;
+    top: 50%;
+    background: transparent;
+    color: #fff;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    position: absolute;
+    z-index: 999;
+}
+
+.arrow:hover {
+    background: #08fd00;
+    color: #777;
+}
+
+.next {    
+    right: 1rem;
+}
+
+.prev {    
+    left: 1rem;
+}
+
+hr {
+    border: 1px solid #00ff15;
+}
+
+@media screen and (max-width: 600px) {
+    .arrow {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .next {
+        right: 4rem;
+    }
+
+    .outside-wrapper {
+        padding-left: 3.5rem;
+        width: 115%;
+    }
+
+    .title {
+        top: 3px;
+        height: 25%;
+    }
+
+    .title > * {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    @keyframes slide-down {
+        0% {
+            visibility: visible;
+            top: 1px;
+        }
+        100% {
+            visibility: visible;
+            left: 3px;
+        }
+    }
+
+    .content {
+        width: 85%;
+        left: 1px;
+        bottom: 2px;
+        height: 20%;
+    }
+
+    .content > * {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: .6rem;
+        margin-bottom: 1rem;
+    }
+
+    @keyframes slide-up {
+        0% {
+            visibility: visible;
+            left: -50px;
+        }
+        100% {
+            visibility: visible;
+            bottom: 2px;
+        }
+    }
+
+    .bottom-line {
+        display: none;
+    }
+}
