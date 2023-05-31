@@ -41,7 +41,7 @@ const Slider = () => {
     client.fetch(query)
         .then((data) => setAbouts(data))
     }, []);
-
+    
   return (
     <section className='outside-wrapper'>        
         <div className="slider">
@@ -52,15 +52,15 @@ const Slider = () => {
                     <div className={index === currentSlide ? "slide current" : "slide"} key={index}>
                         {index === currentSlide && (
                             <>
-                                <img src={urlFor(about.imgUrl)} alt={about.title} />
-                                <div className="title">
+                                <div className="title">                                    
                                     <h2>{about.title}</h2>
-                                    <hr/>
+                                    <hr className="top-line"/>
                                 </div>
+                                <img src={urlFor(about.imgUrl)} alt={about.title} />                                                                               
                                 <div className="content">                                    
                                     <p>{about.description}</p>
                                     <hr className="bottom-line"/>
-                                </div>
+                                </div> 
                             </>                        
                         )}
                     </div>

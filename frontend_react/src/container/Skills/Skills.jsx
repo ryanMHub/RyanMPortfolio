@@ -72,7 +72,7 @@ const Skills = () => {
                         <h4 className="bold-text">{work.name}</h4>
                         <p  className="p-text name-text">{work.company}</p>
                       </div>
-                      <div className="outer-div"><div className="inner-div"><p className="text-box">{work.desc}</p></div></div>
+                      <div className="outer-div outer-exp"><div className="inner-div inner-exp"><p className="text-box">{work.desc}</p></div></div>
                     </motion.div>                                       
                   </div>
                 ))}

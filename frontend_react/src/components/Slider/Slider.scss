@@ -1,6 +1,10 @@
 .outside-wrapper {
     padding-top: 20px;
-    width: 70%;       
+    width: 90%;
+    
+    @media screen and (min-width: 2150px) {
+        width: 60%;
+    }
 }
 
 .slider {
@@ -21,15 +25,9 @@
     transition: all 0.5s ease;
 }
 
-@media screen and (min-width: 600px) {
-    .slide img {
-        width: 100%;
-        height: 100%;
-    }
-}
-
 .slide img {
     height: 100%;
+    width: 100%;
     border-radius: 10px;
 }
 
@@ -96,9 +94,15 @@
     margin-bottom: 1rem;
 }
 
-.current {
+.current {    
     opacity: 1;
     transform: translateX(0);
+
+    @media screen and (max-width: 1200px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .current .content {
@@ -139,30 +143,38 @@ hr {
     border: 1px solid #00ff15;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1150px) {
+    .slider {
+        padding-top: 88.88%;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 80%;
+    }
+
+    .outside-wrapper {        
+        width: 100%;
+    }
+
     .arrow {
-        width: 2rem;
-        height: 2rem;
-    }
-
-    .next {
-        right: 4rem;
-    }
-
-    .outside-wrapper {
-        padding-left: 3.5rem;
-        width: 115%;
-    }
+        width: 3rem;
+        height: 3rem;
+    }   
 
     .title {
-        top: 3px;
-        height: 25%;
+        top: 1px;
+        border-top: 2px solid #8400ff;
+        height: 20%;
+        width: 100%;
     }
 
     .title > * {
         color: #fff;
-        font-size: 1rem;
-        margin-bottom: 1rem;
+        font-size: 3rem;
+        margin-top: 1rem;
+        text-align: center;
+        border-bottom: 1px solid white;
     }
 
     @keyframes slide-down {
@@ -172,22 +184,25 @@ hr {
         }
         100% {
             visibility: visible;
-            left: 3px;
+            left: 1px;
         }
     }
 
     .content {
-        width: 85%;
-        left: 1px;
+        box-sizing: border-box;
+        border-bottom: 2px solid #8400ff;
+        width: 100%;
+        left: -50px;
         bottom: 2px;
-        height: 20%;
+        height: 25%;
     }
 
-    .content > * {
+    .content > * {        
         color: #ffffff;
         font-weight: 500;
-        font-size: .6rem;
-        margin-bottom: 1rem;
+        font-size: 2rem;
+        margin-top: 1rem;
+        text-align: center; 
     }
 
     @keyframes slide-up {
@@ -198,10 +213,89 @@ hr {
         100% {
             visibility: visible;
             bottom: 2px;
+            left: 1px;
         }
+    }
+
+    .top-line {
+        display: none;
     }
 
     .bottom-line {
         display: none;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .title > * {        
+        font-size: 2.5rem;                
+    }
+    .content > * {           
+        font-size: 1.7rem; 
+        margin-top: .5rem;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .arrow {
+        width: 2rem;
+        height: 2rem;
+    }  
+
+    .title > * {        
+        font-size: 2rem;
+        margin-top: .5rem;                
+    }
+
+    .content > * {  
+        margin-top: 0rem;                      
+        font-size: 1.4rem; 
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .next {
+        right: 1rem;
+    }
+
+    .prev {
+        left: 1rem;
+    }  
+    
+    .content > * {                
+        font-weight: 400;
+        font-size: 1.2rem; 
+    }
+    
+}
+
+@media screen and (max-width: 650px) {
+    .title > * {        
+        font-size: 1.5rem;
+        margin-top: .5rem;                
+    }
+    .content > * {                        
+        font-size: 1rem; 
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .title > * {                
+        margin-top: 0rem;                
+    }
+
+    .content > * {                        
+        font-size: .8rem; 
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .title > * {        
+        font-size: 1.2rem;        
+    }
+
+    .content > * {                
+        font-weight: 300;
+        font-size: .7rem; 
     }
 }

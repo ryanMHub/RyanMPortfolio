@@ -37,6 +37,7 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import atsign from '../assets/atsign.svg';
+import atsignnew from '../assets/atsignnew.png';
 
 //after importing all of the image addresses and assigning them a name create a list of the images
 const image_list = {
@@ -74,6 +75,7 @@ const image_list = {
   skype,
   spotify,
   atsign,
+  atsignnew,
 };
 
 //export the list of images

@@ -126,11 +126,7 @@
             font-size: 1.5rem;
         }
 
-        .name-text {
-            font-weight: 400;
-            color: var(--yellow-color);
-            margin-top: 5px;
-        }
+        
     }
 }
 
@@ -158,18 +154,10 @@
 }
 
 //possibly move to main css
-.outer-div {
-    box-shadow: inset 2px 5px 20px #000000;
-    width: fit-content;
-    height: fit-content;
-    border-radius: 5px;
+.outer-exp {    
+    width: fit-content;    
 }
 
-.inner-div {
-    width: fit-content;
-    height: fit-content;
-    background: #fff;
-    box-shadow: inset 0px -10px 25px #700, 0px 5px 5px #333;
-    margin: 20px 30px;     
-    border-radius: 5px;
+.inner-exp {
+    width: fit-content;    
 }

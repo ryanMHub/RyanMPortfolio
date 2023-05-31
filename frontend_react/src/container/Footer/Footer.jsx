@@ -33,12 +33,12 @@ const Footer = () => {
           </div>
           <div className="app__contact">
             <div className="app__contact-info">
-              <div className="outer-divf"><div className="inner-divd"><TextField className="contact-info" variant="outlined" label="Full Name" name="name" /></div></div>       
-              <div className="outer-divf"><div className="inner-divd"><TextField className="contact-info" variant="outlined" label="Email" name="email" /></div></div>
-              <div className="outer-divf"><div className="inner-divd"><TextField className="contact-info" variant="outlined" label="Subject" name="subject" /></div></div>             
+              <div className="outer-div outer-contact"><div className="inner-div inner-contact"><TextField className="contact-info" variant="outlined" label="Full Name" name="name" /></div></div>       
+              <div className="outer-div outer-contact"><div className="inner-div inner-contact"><TextField className="contact-info" variant="outlined" label="Email" name="email" /></div></div>
+              <div className="outer-div outer-contact"><div className="inner-div inner-contact"><TextField className="contact-info" variant="outlined" label="Subject" name="subject" /></div></div>             
             </div>
-            <div className="outer-divd">
-              <div className="inner-divd">
+            <div className="outer-div outer-message">
+              <div className="inner-div inner-contact">
                 <TextField className="contact-message" label="Message" name="message" multiline rows={10} />
               </div>
             </div>
@@ -49,13 +49,16 @@ const Footer = () => {
             </Button>
           </div>
         </form>
+        {/* come back and add this effect later
         <motion.div 
-          whileInView={{ opacity: [0,1] }}
-          transition={{ duration: 0.5, delayChildren: 0.5 }}
-          className="contact-logo">
-            <img src={images.atsign} alt="contact logo" />                        
-      </motion.div>        
-      </div>            
+          animate={{ rotate: [0, 200, 200, 0]  }}
+          transition={{ repeat: 2, duration: 1}}
+          classname="contact-logo-container">
+          <img className="contact-logo" src={images.atsignnew} alt="contact logo" />       
+        </motion.div>*/}    
+        <img className="contact-logo" src={images.atsignnew} alt="contact logo" /> 
+      </div>    
+            
     </>
   );
 };
