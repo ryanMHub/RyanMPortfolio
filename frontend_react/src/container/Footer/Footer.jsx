@@ -26,25 +26,26 @@ const Footer = () => {
       <h2 className="head-text"><span>Contact Me</span></h2>
 
       <div className="app__contact-block">
-        <form className="app__contact-form">
+        <form className="app__contact-form" name="contact" method="post" data-netlify="true" onSubmit="submit">
+          <input type="hidden" name="form-name" value="contact"/>
           <div className="app__form-header">
             <h4 className="bold-text">Email Me To</h4>
             <p  className="p-text name-text">Connect</p>
           </div>
           <div className="app__contact">
             <div className="app__contact-info">
-              <div className="outer-div outer-contact"><div className="inner-div inner-contact"><TextField className="contact-info" variant="outlined" label="Full Name" name="name" /></div></div>       
-              <div className="outer-div outer-contact"><div className="inner-div inner-contact"><TextField className="contact-info" variant="outlined" label="Email" name="email" /></div></div>
-              <div className="outer-div outer-contact"><div className="inner-div inner-contact"><TextField className="contact-info" variant="outlined" label="Subject" name="subject" /></div></div>             
+              <div className="outer-div outer-contact"><div className="inner-div inner-contact"><TextField className="contact-info" variant="outlined" required label="Full Name" name="name" /></div></div>       
+              <div className="outer-div outer-contact"><div className="inner-div inner-contact"><TextField className="contact-info" variant="outlined" required label="Email" type="email" name="email" /></div></div>
+              <div className="outer-div outer-contact"><div className="inner-div inner-contact"><TextField className="contact-info" variant="outlined" required label="Subject" name="subject" /></div></div>             
             </div>
             <div className="outer-div outer-message">
               <div className="inner-div inner-contact">
-                <TextField className="contact-message" label="Message" name="message" multiline rows={10} />
+                <TextField className="contact-message" required label="Message" name="message" multiline rows={10} />
               </div>
             </div>
           </div>
           <div className='app__form-button'>
-            <Button className="contact-button" sx={buttonStyle} endIcon={<Send />}>
+            <Button className="contact-button" sx={buttonStyle} endIcon={<Send />} type="submit">
               Send
             </Button>
           </div>
