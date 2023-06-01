@@ -26,7 +26,7 @@ const Footer = () => {
       <h2 className="head-text"><span>Contact Me</span></h2>
 
       <div className="app__contact-block">
-        <form className="app__contact-form" name="contact" method="post" data-netlify="true" onSubmit="submit">
+        <form className="app__contact-form" name="contact" method="post" netlify netlify-honeypot='bot-field' onSubmit="submit">
           <input type="hidden" name="form-name" value="contact"/>
           <div className="app__form-header">
             <h4 className="bold-text">Email Me To</h4>
