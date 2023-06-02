@@ -25,17 +25,9 @@ const Footer = () => {
     <>
       <h2 className="head-text"><span>Contact Me</span></h2>
 
-      <form name="contact" method="post">
-        <input type="hidden" name="form-name" value="contact" />
-        <input type="text" name="name" placeholder="Your name"/>
-        <input type="email" name="email" placeholder="Your email"/>
-        <input type="text" name="subject" placeholder="Your subject"/>
-        <input type="text" name="message" placeholder="Your message"/>
-        <button type="submit">Send Message</button>
-      </form>
-
       <div className="app__contact-block">
-        <form className="app__contact-form" name="act" action="/contact" method="post">          
+        <form className="app__contact-form" name="contact" method="post">  
+        <input type="hidden" name="form-name" value="contact" />        
           <div className="app__form-header">
             <h4 className="bold-text">Email Me To</h4>
             <p  className="p-text name-text">Connect</p>
