@@ -39,6 +39,11 @@ import spotify from '../assets/spotify.png';
 import atsign from '../assets/atsign.svg';
 import atsignnew from '../assets/atsignnew.png';
 
+import scene01 from '../assets/comic/scene01.png';
+import scene02 from '../assets/comic/scene02_dyna_resize.png';
+import scene03 from '../assets/comic/scene03.png';
+import scene04 from '../assets/comic/scene04.png';
+
 //after importing all of the image addresses and assigning them a name create a list of the images
 const image_list = {
   email,
@@ -76,6 +81,10 @@ const image_list = {
   spotify,
   atsign,
   atsignnew,
+  scene01,
+  scene02,
+  scene03,
+  scene04,
 };
 
 //export the list of images

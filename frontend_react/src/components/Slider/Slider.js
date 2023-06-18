@@ -1,5 +1,5 @@
-import {useState,  useEffect} from 'react';
-import { urlFor, client } from '../../client'
+import {useState, useEffect} from 'react';
+import { urlFor, client } from '../../client';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import "./Slider.scss";
 
