@@ -40,9 +40,14 @@ import atsign from '../assets/atsign.svg';
 import atsignnew from '../assets/atsignnew.png';
 
 import scene01 from '../assets/comic/scene01.png';
+import scene01LQIP from '../assets/comic/scene01LQIP.png';
 import scene02 from '../assets/comic/scene02_dyna_resize.png';
+import scene02LQIP from '../assets/comic/scene02LQIP.png';
 import scene03 from '../assets/comic/scene03.png';
+import scene03LQIP from '../assets/comic/scene03LQIP.png';
 import scene04 from '../assets/comic/scene04.png';
+import scene04LQIP from '../assets/comic/scene04LQIP.png';
+
 
 //after importing all of the image addresses and assigning them a name create a list of the images
 const image_list = {
@@ -82,9 +87,13 @@ const image_list = {
   atsign,
   atsignnew,
   scene01,
+  scene01LQIP,
   scene02,
+  scene02LQIP,
   scene03,
+  scene03LQIP,
   scene04,
+  scene04LQIP,
 };
 
 //export the list of images

@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import {sliderData} from './slider-data';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "./Slider.scss"
 
 const SliderHCode = () => {
@@ -48,7 +49,8 @@ const SliderHCode = () => {
                                         <h2>{slide.title}</h2>
                                         <hr className="top-line"/>
                                     </div>
-                                    <img src={slide.image} alt={slide.title} />                                                                               
+                                    <img src={slide.image} alt={slide.title}/>
+                                    {/*<LazyLoadImage className="slide-image" height={`100%`} width={`100%`} src={slide.image} alt={slide.title} placeholderSrc={slide.placeholder} />*/}
                                     <div className="content">                                    
                                         <p>{slide.description}</p>
                                         <hr className="bottom-line"/>

@@ -1,9 +1,9 @@
 .outside-wrapper {
     padding-top: 20px;
-    width: 90%;
+    width: 70%;
     
     @media screen and (min-width: 2150px) {
-        width: 60%;
+        width: 50%;
     }
 }
 
@@ -25,9 +25,16 @@
     transition: all 0.5s ease;
 }
 
+//for lazy load working on decision
+.slide-image {    
+    background-color: var(--black-color);    
+    border-radius: 10px;
+}
+
 .slide img {
     height: 100%;
     width: 100%;
+    background-color: var(--black-color);
     border-radius: 10px;
 }
 
@@ -96,7 +103,7 @@
 
 .current {    
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0);    
 
     @media screen and (max-width: 1200px){
         display: flex;
